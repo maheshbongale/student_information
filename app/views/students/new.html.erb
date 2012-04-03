@@ -1,0 +1,42 @@
+<html>
+<head>
+</head>
+<body>
+<div>
+  <%= form_for @student, :url => "", :method => "POST" do |f| %>
+      <div style="float:left;">
+        <%= f.label :name %>
+      </div>
+      <div>
+        <%= f.text_field :name %>
+      </div>
+
+      <div style="float:left;">
+        <%= f.label :subject1 %>
+      </div>
+      <div>
+        <%= f.text_field :subject1%>
+      </div>
+
+      <div style="float:left;">
+        <%= f.label :subject2 %>
+      </div>
+      <div>
+        <%= f.text_field :subject2%>
+      </div>
+
+      <div style="float:left;">
+        <%= f.label :subject3 %>
+      </div>
+
+      <div>
+        <%= f.text_field :subject3%>
+      </div>
+
+      <div>
+        <%= f.submit "Register"%>
+      </div>
+  <% end %>
+</div>
+</body>
+</html>

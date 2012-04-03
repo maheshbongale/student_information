@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  id: 1
+  name: MyString
+  subject1: MyString
+  subject2: MyString
+  subject3: MyString
+
+two:
+  id: 1
+  name: MyString
+  subject1: MyString
+  subject2: MyString
+  subject3: MyString
