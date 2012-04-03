@@ -3,38 +3,46 @@
 </head>
 <body>
 <div>
-  <%= form_for @student, :url => "", :method => "POST" do |f| %>
-      <div style="float:left;">
-        <%= f.label :name %>
-      </div>
-      <div>
-        <%= f.text_field :name %>
-      </div>
+  <%= form_tag("students#create") do  %>
 
       <div style="float:left;">
-        <%= f.label :subject1 %>
+        <%= label_tag :id %>
       </div>
       <div>
-        <%= f.text_field :subject1%>
+        <%= text_field_tag :id %>
       </div>
 
       <div style="float:left;">
-        <%= f.label :subject2 %>
+        <%= label_tag :name %>
       </div>
       <div>
-        <%= f.text_field :subject2%>
+        <%= text_field_tag :name %>
       </div>
 
       <div style="float:left;">
-        <%= f.label :subject3 %>
+        <%= label_tag :subject1 %>
+      </div>
+      <div>
+        <%= text_field_tag :subject1%>
+      </div>
+
+      <div style="float:left;">
+        <%= label_tag :subject2 %>
+      </div>
+      <div>
+        <%= text_field_tag :subject2%>
+      </div>
+
+      <div style="float:left;">
+        <%= label_tag :subject3 %>
       </div>
 
       <div>
-        <%= f.text_field :subject3%>
+        <%= text_field_tag :subject3%>
       </div>
 
       <div>
-        <%= f.submit "Register"%>
+        <%= submit_tag "Register"%>
       </div>
   <% end %>
 </div>

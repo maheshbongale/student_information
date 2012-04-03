@@ -1,0 +1,36 @@
+<html>
+<head></head>
+<body>
+<%= form_for @user do |f| %>
+    <div>
+      <%= f.label :name %>
+    </div>
+    <div>
+      <% f.text_field :name %>
+    </div>
+
+    <div>
+      <%= f.label :email %>
+    </div>
+    <div>
+      <% f.text_field :email %>
+    </div>
+
+    <div>
+      <%= f.label :password %>
+    </div>
+    <div>
+      <% f.text_field :password %>
+    </div>
+
+    <div>
+      <%= f.label :password_confirm %>
+    </div>
+    <div>
+      <% f.text_field :password_confirm %>
+    </div>
+
+    <%= f.submit "Sign_Up" %>
+<% end %>
+</body>
+</html>
