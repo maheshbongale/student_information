@@ -2,18 +2,19 @@ class StudentsController < ApplicationController
   def index
   end
 
-  def new
+  def new_student
     @student = StudentInfo.new
   end
 
-  def create
-    logger.info "++++++++++++++++++++++++++++++++++++++"
-    @student = StudentInfo.new(params[:id])
-    logger.info("%%%%%%%%#{@student.inspect}")
+  def create_student
+    @student = StudentInfo.new(params[:student_info])
     @student.save
+    logger.info @student.id.inspect
+    redirect_to show_student_student_path(@student.id)
   end
 
-  def show
+  def show_student
+    @student = StudentInfo.find(params[:id])
   end
 
   def destroy

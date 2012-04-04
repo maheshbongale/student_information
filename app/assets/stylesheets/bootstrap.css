@@ -133,10 +133,10 @@ textarea {
 body {
   margin: 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
-  color: #333333;
-  background-color: #ffffff;
+  font-size: 15px;
+  line-height: 41px;
+  color: #000000;
+  background-color: gray;
 }
 a {
   color: #0088cc;
@@ -3953,7 +3953,7 @@ a.thumbnail:hover {
   color: #ffffff;
 }
 .hero-unit {
-  padding: 60px;
+  padding: 6px;
   margin-bottom: 30px;
   background-color: #eeeeee;
   -webkit-border-radius: 6px;

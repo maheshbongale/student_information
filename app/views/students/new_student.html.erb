@@ -1,0 +1,49 @@
+<html>
+<head>
+</head>
+<body>
+<div class="">
+
+</div>
+<div style="margin-top:100px">
+  <%= form_for(@student, :url => students_create_student_path, :method => "POST") do |f| %>
+
+      <div style="float:left; margin-left: 420px">
+        <%= f.label :name %>
+      </div>
+      <div>
+        <%= f.text_field :name %>
+      </div>
+
+      <div style="float:left; margin-left: 405px">
+        <%= f.label :subject1 %>
+      </div>
+      <div>
+        <%= f.text_field :subject1%>
+      </div>
+
+      <div style="float:left; margin-left: 405px">
+        <%= f.label :subject2 %>
+      </div>
+      <div>
+        <%= f.text_field :subject2%>
+      </div>
+
+      <div style="float:left; margin-left: 405px">
+        <%= f.label :subject3 %>
+      </div>
+
+      <div>
+        <%= f.text_field :subject3%>
+      </div>
+
+      <div style="margin-left: 510px" >
+        <%= f.submit "Register"%>
+      </div>
+      <div style="margin-left: 505px">
+        <%= link_to "Home Page", root_path %>
+      </div>
+  <% end %>
+</div>
+</body>
+</html>

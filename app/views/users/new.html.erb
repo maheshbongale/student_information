@@ -1,43 +1,47 @@
 <html>
-<head></head>
+<head>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+   <link href= "assets/bootstrap.css" rel="stylesheet">
+  <%= csrf_meta_tags %>
+</head>
 <body>
-<div style="float:left;">
-  <div class="hero-unit-div"></div>
+<div style="margin-left: 550px">Sign-Up Form</div>
+<div class="hero-unit" align="">
 
-</div>
-<div class="hero-unit" >
   <%= form_for(@user, :url => users_sign_up_path, :method => "POST") do |f| %>
-      <div >
+       <%= render 'users/error' %>
+      <div style="margin-left: 520px" >
         <%= f.label :name %>
       </div>
-      <div>
+      <div style="margin-left: 520px">
         <%= f.text_field :name %>
       </div>
 
-      <div >
+      <div style="margin-left: 520px">
         <%= f.label :email %>
       </div>
-      <div>
+      <div style="margin-left: 520px">
         <%= f.text_field :email %>
       </div>
 
-      <div >
+      <div style="margin-left: 520px">
         <%= f.label :password %>
       </div>
-      <div>
 
+      <div style="margin-left: 520px">
         <%= f.password_field :password %>
       </div>
 
-      <div >
+      <div style="margin-left: 520px">
         <%= f.label :password_confirmation %>
       </div>
-      <div>
 
+      <div style="margin-left: 520px">
         <%= f.password_field :password_confirmation %>
       </div>
 
-      <div>
+      <div style="margin-left: 580px">
         <%= f.submit "Sign Up", :class => "btn btn-large btn-success"  %>
       </div>
   <% end %>

@@ -1,9 +1,35 @@
 Student::Application.routes.draw do
 #  get "users/index"
 #
-       get "users/new"
-       post "users/sign_up"
-#
+
+
+  get "users/new"
+  post "users/sign_up"
+
+  resources :sessions, :only => [:new, :create, :destroy]
+  match '/sign_up', :to => 'users#new'
+  match '/sign_in', :to => 'sessions#new'
+  match '/sign_out', :to => 'sessions#destroy', :via => 'delete'
+
+
+  resources :sessions do
+    member do
+      get :show_user
+    end
+  end
+
+  get "students/new_student"
+  post "students/create_student"
+
+
+  resources :students do
+    member do
+      get :show_student
+    end
+  end
+
+
+
 #  get "users/create"
 #
 #  get "users/show"
@@ -21,7 +47,7 @@ Student::Application.routes.draw do
 #  resource :students
 #  resource :users
 
-  ########## match "/sign_up" => "users#sign_up"
+  #match :students/:new_student
 
 
 
@@ -76,7 +102,7 @@ Student::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'users#new'
+  root :to => 'students#index'
 
   # See how all your routes lay out with "rake routes"
 
