@@ -3,24 +3,38 @@ Student::Application.routes.draw do
 #
 
 
-  get "users/new"
-  post "users/sign_up"
-
-  resources :sessions, :only => [:new, :create, :destroy]
+  resources :sessions, :only => [:create]
   match '/sign_up', :to => 'users#new'
   match '/sign_in', :to => 'sessions#new'
   match '/sign_out', :to => 'sessions#destroy', :via => 'delete'
 
-
-  resources :sessions do
+   resources :sessions do
     member do
       get :show_user
     end
   end
+  
+#  get "users/new"
+#  post "users/sign_up"
+
+  resources :users do
+    member do
+      get :edit_user
+      get :new
+      post :sign_up
+    end
+  end
+
+
 
   get "students/new_student"
   post "students/create_student"
 
+#  resources :users do
+#    member do
+#      put :edit_user
+#    end
+#  end
 
   resources :students do
     member do
