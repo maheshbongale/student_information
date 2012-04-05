@@ -4,9 +4,9 @@
       <%= link_to "Student Information System", root_path, :id => "logo" %>
       <ul class="nav pull-right">
         <li><%= link_to "Home", root_path %></li>
-        <li><%= link_to "Edit User",  edit_user_user_path if current_user.present?%></li>
+        <li><%= link_to "Edit User", edit_user_user_path(@user)%></li>-->
         <li><%= link_to "Sign out", sign_out_path, :method => "delete" %></li>
-        <li><%= link_to "Sign in", new_session_path %></li>
+        <li><%= link_to "Sign in", sign_in_path %></li>
       </ul>
     </div>
   </div>

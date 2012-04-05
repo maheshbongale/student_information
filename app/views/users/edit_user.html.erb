@@ -1,20 +1,38 @@
 <div class="row">
-  <div class="span6 offset3">
-    <%= form_for(@user, :url =>  edit_user_user_path, :method => "PUT") do |f| %>
+  <div class="span6 offset3" style="margin-top:60px" >
+    <%= form_for(@user, :url =>   update_user_user_path(@user), :method => "PUT") do |f| %>
         <%= render 'users/error', :object => f.object %>
-        <%= f.label :name %>
-        <%= f.text_field :name %>
+        <div style="margin-left: 320px" >
+          <%= f.label :name %>
+        </div>
+        <div style="margin-left: 320px" >
+          <%= f.text_field :name %>
+        </div>
 
-        <%= f.label :email %>
-        <%= f.text_field :email %>
+        <div style="margin-left: 320px" >
+          <%= f.label :email %>
+        </div>
+        <div style="margin-left: 320px" >
+          <%= f.text_field :email %>
+        </div>
 
-        <%= f.label :password %>
-        <%= f.password_field :password %>
+        <div style="margin-left: 320px" >
+          <%= f.label :password %>
+        </div>
+        <div style="margin-left: 320px" >
+          <%= f.password_field :password %>
+        </div>
 
-        <%= f.label :password_confirmation, "Confirm Password" %>
-        <%= f.password_field :password_confirmation %>
-
-        <%= f.submit "Save changes", :class => "btn btn-large btn-primary" %>
+        <div style="margin-left: 320px" >
+          <%= f.label :password_confirmation, "Confirm Password" %>
+        </div>
+        <div style="margin-left: 320px" >
+          <%= f.password_field :password_confirmation %>
+        </div>
+        
+        <div style="margin-left: 375px" >
+          <%= f.submit "Save changes", :class => "btn btn-large btn-primary" %>
     <% end %>
+    </div>
   </div>
 </div>
