@@ -18,7 +18,7 @@ class SessionsController < ApplicationController
     sign_out
     redirect_to root_path
   end
-  def show_user
+  def show_user 
     @user = User.find(params[:id])
   end
 
